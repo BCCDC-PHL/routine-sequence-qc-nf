@@ -9,7 +9,7 @@ process interop_summary {
 
     executor 'local'
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "interop*.csv", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "interop*.csv", mode: 'copy'
 
     cpus 1
 

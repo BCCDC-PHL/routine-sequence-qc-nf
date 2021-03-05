@@ -7,7 +7,7 @@ process fastqc {
 
     tag { sample_id }
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_*_fastqc", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_*_fastqc", mode: 'copy'
 
     cpus 2
 

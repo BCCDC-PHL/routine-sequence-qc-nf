@@ -2,7 +2,7 @@ process kraken2 {
 
     tag { sample_id }
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_kraken2.txt", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_kraken2.txt", mode: 'copy'
 
     cpus 8
 

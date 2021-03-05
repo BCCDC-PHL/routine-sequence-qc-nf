@@ -7,7 +7,7 @@ process parse_sample_sheet {
 
     tag { run_id }
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "sample_sheet.json", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "sample_sheet.json", mode: 'copy'
 
     executor 'local'
 

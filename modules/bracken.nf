@@ -2,7 +2,7 @@ process bracken {
 
     tag { sample_id + " / " + taxonomic_level }
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_${taxonomic_level}_bracken*", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "${sample_id}_${taxonomic_level}_bracken*", mode: 'copy'
 
     cpus 2
 

@@ -7,7 +7,7 @@ process multiqc {
 
     tag { run_id }
 
-    publishDir "${params.outdir}/${task.process.replaceAll(":","_")}", pattern: "multiqc_*", mode: 'copy'
+    publishDir "${params.output}/RoutineQC/${task.process.replaceAll(":","_")}", pattern: "multiqc_*", mode: 'copy'
 
     cpus 2
 
